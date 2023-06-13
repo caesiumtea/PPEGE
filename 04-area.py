@@ -1,4 +1,5 @@
-# tests passed! complete! (without validating arguments)
+# solved
+# tests passed!  (without validating arguments)
 # after adding validation, some asserts fail, but that's correct
 
 def area(length, width):
