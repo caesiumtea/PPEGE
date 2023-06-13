@@ -1,20 +1,38 @@
-# tests passed! complete!
+# tests passed! complete! (without validating arguments)
+# after adding validation, some asserts fail, but that's correct
 
 def area(length, width):
-    return length * width
+    if length > 0 and width > 0:
+        return length * width
+    else:
+        print("Invalid argument.")
 
 def perimeter(length, width):
-    return 2 * length + 2 * width
+    if length > 0 and width > 0:
+        return 2 * length + 2 * width
+    else:
+        print("Invalid argument.")
 
 def volume(length, width, height):
-    return length * width * height
+    if length > 0 and width > 0:
+        return length * width * height
+    else:
+        print("Invalid argument.")
 
 def surfaceArea(length, width, height):
-    return (2 * length * width) + (2 * length * height) + (2 * width * height)
+    if length > 0 and width > 0:
+        return (2 * length * width) + (2 * length * height) + (2 * width * \
+                                                               height)
+    else:
+        print("Invalid argument.")
 
 def surfaceArea_alt(length, width, height):
-    return 2 * area(length, width) + 2 * area(length, height) \
+    if length > 0 and width > 0:
+        return 2 * area(length, width) + 2 * area(length, height) \
         + 2 *  area(height, width)
+    else:
+        print("Invalid argument.")
+
 
 assert area(10, 10) == 100
 
